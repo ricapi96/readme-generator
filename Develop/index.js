@@ -4,9 +4,11 @@ const inquirer = require("inquirer");
 
 // TODO: Create an array of questions for user input
 const questions = [
+    {
     type: 'input',
     name: 'github',
     message: 'What is your Github username?'
+    },
 ];
 
 // TODO: Create a function to write README file
