@@ -35,7 +35,11 @@ const questions = [
         name: 'usage',
         message: 'What does the user need to know about using the repo?'
     },
-];
+])
+
+.then((data) => {
+    inquirer = `${data.name}`
+})
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
