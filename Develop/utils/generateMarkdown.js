@@ -5,6 +5,12 @@ function renderLicenseBadge(license) {
     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
   } else if (license === "APACHE 2.0") {
     return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+  } else if (license === "Eclipse") {
+    return `[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`;
+  } else if (license === "Mozilla") {
+    return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
+  } else if (license === "GNU") {
+    return `[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)`;
   } else {
     return "";
   }
@@ -18,6 +24,12 @@ function renderLicenseLink(license) {
     return `https://opensource.org/licenses/MIT`;
   } else if (license === "APACHE 2.0") {
     return `https://opensource.org/licenses/Apache-2.0`;
+  } else if (license === "Eclipse") {
+    return `https://opensource.org/licenses/Eclipse`;
+  } else if (license === "Mozilla") {
+    return `https://opensource.org/licenses/Mozilla`;
+  } else if (license === "GNU") {
+    return `https://opensource.org/licenses/GNU`;
   } else {
     return "";
   }
@@ -64,15 +76,16 @@ ${data.installation}
 \`\`\`
 ## Usage  
 ${data.usage}
-${renderLicenseLink(data.license)}
+
 ## Contributing
-${data.contributin}
+${data.contributing}
 ## License
 ${data.license}
+${renderLicenseLink(data.license)}
 ## Badge
 ${data.badge}
 ## Questions
-* If you have any questions or concerns, please contact me at ${data.github} or email me at ${data.email}.
+* If you have any questions or concerns, please contact me at https://github.com/${data.github} or email me at ${data.email}.
 `;
 }
 

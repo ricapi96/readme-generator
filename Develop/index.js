@@ -30,10 +30,10 @@ const questions = [
         message: 'Please write a short description of your project.',
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: 'What kind of license should your project have?',
-        choices: ['MIT', 'Apache 2.0', 'Eclipse', 'Mozilla', 'GNU'],
+        choices: ['MIT', 'APACHE 2.0', 'Eclipse', 'Mozilla', 'GNU', 'none'],
     },
     {
         type: 'input',
@@ -46,9 +46,10 @@ const questions = [
         message: 'Were there any contributors that assisted this project?',
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'badge',
         message: 'What kind of badge would you like on this project?',
+        choices: ['Made for VSCode', 'Badges Awesome', 'none'],
     },
     {
         type: 'input',
