@@ -22,10 +22,6 @@ function renderLicenseLink(license) {
     return `https://opensource.org/licenses/MIT`;
   } else if (license === "APACHE 2.0") {
     return `https://opensource.org/licenses/Apache-2.0`;
-  } else if (license === "GPL 3.0") {
-    return `https://img.shields.io/badge/License-GPLv3-blue.svg`;
-  } else if (license === "BSD 3") {
-    return `https://img.shields.io/badge/License-BSD%203--Clause-blue.svg`;
   } else {
     return "";
   }
@@ -41,8 +37,6 @@ function renderTableLicense(license) {
 * [Usage](#usage)
 * [License](#license)
 * [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
     `;
   } else {
     return `
@@ -50,8 +44,6 @@ function renderTableLicense(license) {
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
     `;
   }
 }
@@ -71,21 +63,6 @@ ${data.installation}
 ## Usage  
 ${data.usage}
 ${renderLicenseLink(data.license)}
-## Contributing
-${data.contributing}
-## Tests
- 
-To run tests, run the following command:  
-\`\`\`
-${data.tests}
-\`\`\`
-## Questions  
-If you have any questions about the repo, open an issue or contact me directly at ${
-    data.email
-  }.  
-  You can find more of my work at [${data.username}](https://github.com/${
-    data.username
-  }).
 `;
 }
 
