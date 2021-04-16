@@ -52,9 +52,10 @@ const questions = [
         choices: ['Made for VSCode', 'Badges Awesome', 'none'],
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'installation',
-        message: 'Explain how the user would intall program, if necessary:',
+        message: 'What command is needed to run this file?',
+        choices: ['npm i', 'none'],
     },
   ];
 
