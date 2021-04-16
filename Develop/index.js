@@ -2,13 +2,13 @@
 
 const inquirer = require("inquirer");
 const fs = require('fs');
-const util = require('util');
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
-const writeFileAsync = util.promisify(fs.writeFile);
+
+
 
 // TODO: Create an array of questions for user input
-const promptUser = () => {
-    return inquirer.prompt([
+const questions = [
     {
         type: 'input',
         name: 'github',
@@ -40,17 +40,26 @@ const promptUser = () => {
         name: 'usage',
         message: 'What does the user need to know about using the repo?',
     },
-]);
-};
+  ];
 
 
 // TODO: Create a function to write README file
-const generateReadme = (answers) =>
+function writeToReadme (fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+    err ? console.log(err) : console.log("Creating README...")
+    );
+}
 
 // TODO: Create a function to initialize app
-function init() {
-    inquirer.prompt(questions).then.
+function init () {
+    inquirer.prompt(questions)
+    .then((data) => {
+        writeToReadme("README.md", generateMarkdown(data));
+    })
+    .catch((err) => console.log(err));
+
 }
+
 
 // Function call to initialize app
 init();
