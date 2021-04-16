@@ -40,6 +40,21 @@ const questions = [
         name: 'usage',
         message: 'What does the user need to know about using the repo?',
     },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'Were there any contributors that assisted this project?',
+    },
+    {
+        type: 'input',
+        name: 'badge',
+        message: 'What kind of badge would you like on this project?',
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Explain how the user would intall program, if necessary:',
+    },
   ];
 
 

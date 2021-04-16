@@ -29,17 +29,23 @@ function renderTableLicense(license) {
   if (license !== "None") {
     return `
 ## Table of Contents 
+* [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
 * [Contributing](#contributing)
+* [Badge](#badge)
+* [Questions](#questions)
     `;
   } else {
     return `
 ## Table of Contents 
+* [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
+* [Badge](#badge)
+* [Questions](#questions)
     `;
   }
 }
@@ -52,13 +58,21 @@ function generateMarkdown(data) {
 ${data.description}
 ${renderTableLicense(data.license)}
 ## Installation
-To install necessary dependencies, run the following command:  
+To install, run the following command:  
 \`\`\`
 ${data.installation}
 \`\`\`
 ## Usage  
 ${data.usage}
 ${renderLicenseLink(data.license)}
+## Contributing
+${data.contributin}
+## License
+${data.license}
+## Badge
+${data.badge}
+## Questions
+* If you have any questions or concerns, please contact me at ${data.github} or email me at ${data.email}.
 `;
 }
 
