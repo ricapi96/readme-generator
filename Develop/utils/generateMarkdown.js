@@ -62,30 +62,48 @@ function renderTableLicense(license) {
   }
 }
 
+// Create a function to generate badge
+function renderBadge(badge) {
+  if (badge === "none") {
+    return "";
+  }else if (badge === "Made for VSCode") {
+    return `[![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)`;
+  }else if (badge === "Badges Awesome") {
+    return '[![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg)](https://github.com/Naereen/badges)';
+  }
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}  
-  ${renderLicenseBadge(data.license)}  
+  ${renderLicenseBadge(data.license)}\n
+
 ## Description
 ${data.description}
-${renderTableLicense(data.license)}
+${renderTableLicense(data.license)}\n
+
 ## Installation
 To install, run the following command:  
 \`\`\`
 ${data.installation}
-\`\`\`
+\`\`\`\n
+
 ## Usage  
-${data.usage}
+${data.usage}\n
+
 
 ## Contributing
-${data.contributing}
+${data.contributing}\n
+
 ## License
 ${data.license}
-${renderLicenseLink(data.license)}
+${renderLicenseLink(data.license)}\n
+
 ## Badge
-${data.badge}
+${renderBadge(data.badge)}\n
+
 ## Questions
-* If you have any questions or concerns, please contact me at https://github.com/${data.github} or email me at ${data.email}.
+* If you have any questions or concerns, please contact me at https://github.com/${data.github}, or email me at ${data.email}.
 `;
 }
 
