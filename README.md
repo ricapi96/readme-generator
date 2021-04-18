@@ -20,7 +20,7 @@ npm inquirer
 ```
 
 ## Walkthrough Video
-
+https://youtu.be/rEIY98Y09Ys
 
 ## Screenshots
 ![](./develop/images/command-line-questions.png)

@@ -52,7 +52,7 @@ const questions = [
         choices: ['Made for VSCode', 'Made with Bash', 'Open Source', 'Badges Awesome', 'none'],
     },
     {
-        type: 'default',
+        type: 'list',
         name: 'installation',
         message: 'What command is needed to run this file?',
         choices: ['npm inquirer', 'none'],
