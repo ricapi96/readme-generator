@@ -69,7 +69,11 @@ function renderBadge(badge) {
   }else if (badge === "Made for VSCode") {
     return `[![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)`;
   }else if (badge === "Badges Awesome") {
-    return '[![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg)](https://github.com/Naereen/badges)';
+    return `[![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg)](https://github.com/Naereen/badges)`;
+  }else if (badge === "Made with Bash") {
+    return `[![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)`;
+  }else if (badge === "Open Source") {
+    return `[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)`;
   }
 }
 

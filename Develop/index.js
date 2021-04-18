@@ -49,13 +49,13 @@ const questions = [
         type: 'list',
         name: 'badge',
         message: 'What kind of badge would you like on this project?',
-        choices: ['Made for VSCode', 'Badges Awesome', 'none'],
+        choices: ['Made for VSCode', 'Made with Bash', 'Open Source', 'Badges Awesome', 'none'],
     },
     {
-        type: 'list',
+        type: 'default',
         name: 'installation',
         message: 'What command is needed to run this file?',
-        choices: ['npm i', 'none'],
+        choices: ['npm inquirer', 'none'],
     },
   ];
 
