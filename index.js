@@ -2,7 +2,9 @@
 
 const inquirer = require("inquirer");
 const fs = require('fs');
+const path = require('path');
 const generateMarkdown = require("./utils/generateMarkdown.js");
+// const outputPath = path.join(OUTPUT_DIR, "README.md");
 
 
 
@@ -61,17 +63,17 @@ const questions = [
 
 
 // TODO: Create a function to write README file
-function writeToReadme (fileName, data) {
-    fs.writeFile(fileName, data, (err) =>
-    err ? console.log(err) : console.log("Creating README...")
-    );
+function writeToFile (fileName, data) {
+    fs.writeFileSync(path.join(process.cwd(), fileName), data); 
+    
 }
 
 // TODO: Create a function to initialize app
 function init () {
     inquirer.prompt(questions)
     .then((data) => {
-        writeToReadme("README.md", generateMarkdown(data));
+        console.log("Creating README...")
+        writeToFile("README.md", generateMarkdown(data));
     })
     .catch((err) => console.log(err));
 
