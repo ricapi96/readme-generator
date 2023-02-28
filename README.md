@@ -31,9 +31,6 @@ https://youtu.be/BS_17z9S8oo
 MIT
 https://opensource.org/licenses/MIT
 
-## Contributing
-* Jude Clark (TA)
-* Sammantha Sasenick (Tutor)
 
 ## Questions
 * If you have any questions or concerns, please contact me at https://github.com/ricapi96, or email me at enroquemore@gmail.com
