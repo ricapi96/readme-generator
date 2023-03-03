@@ -16,7 +16,7 @@ This allows one to quickly and easily create a README file by using a command-li
 ## Installation
 To install, run the following command:
 ```
-npm inquirer
+npm inquirer/npm i
 ```
 
 ## Walkthrough Video
