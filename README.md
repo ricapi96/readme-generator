@@ -18,6 +18,7 @@ To install, run the following command:
 ```
 npm inquirer/npm i
 ```
+- to use require, you must have inquirer version set to 8 or lower in the `package.json`
 
 ## Walkthrough Video
 https://youtu.be/BS_17z9S8oo
