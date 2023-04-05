@@ -24,9 +24,9 @@ npm inquirer/npm i
 https://youtu.be/BS_17z9S8oo
 
 ## Screenshots
-![](./images/command-line-questions.png)
-![](./images/readme.png)
-![](./images/readme-preview.png)
+![CL-questions](./images/command-line-questions.png)
+![Example-Readme](./images/readme.png)
+![Readme](./images/readme-preview.png)
 
 ## License
 MIT
